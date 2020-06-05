@@ -12,7 +12,8 @@ function CreateMessage(){
 
   const submitMsg = (e) =>{
     e.preventDefault();
-    setMessage({...message,message})
+    setMessage({...message,[e.target.name]: e.target.value})
+    console.log(message);
   }
   return (
     <div className='msgpane'>
@@ -29,14 +30,12 @@ function CreateMessage(){
         value={message.text} 
         onChange={handleChange}>
       </textarea>
-      <h2>Your name: {message.name}</h2>
-      <h5>Your message: {message.text}</h5>
+    
       <button onClick={submitMsg}>submit</button>
 
       <div className='displayMsg'>
-        {
-          
-        }
+        <h2>Name: {message.name}</h2>
+        <p>Message: {message.text}</p>
       </div>
 
 
