@@ -4,9 +4,17 @@ function CreateMessage(){
 
   const [message,setMessage] = useState({name: '',text: ''});
 
+   const msglist = [];
+
   const handleChange = (e)=>{
 
     setMessage({...message,[e.target.name]: e.target.value})
+  }
+
+  const submitMsg = (e) =>{
+    e.preventDefault();
+    //msglist = [...message]
+    msglist.push(message)
   }
   return (
     <div className='msgpane'>
@@ -27,7 +35,13 @@ function CreateMessage(){
       <button onClick={submitMsg}>submit</button>
 
       <div className='displayMsg'>
-        {message}
+        <ul>
+          {
+            msglist.map((msg, index)=> (
+              <li key = {index}>{msg}</li>
+            ))
+          }
+        </ul>
       </div>
 
 
