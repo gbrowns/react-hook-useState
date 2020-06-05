@@ -31,7 +31,7 @@ class App extends Component {
 
       < Counter/>
       
-      <HookCounter2 />
+      <HookCounter2 username = 'john doe'/>
 
       <HookCounter3 />
 
