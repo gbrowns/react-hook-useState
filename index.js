@@ -4,6 +4,7 @@ import Counter from './Counter';
 import HookCounter2 from './HookCounter2'
 import HookCounter3 from './HookCounter3'
 import HookCounter4 from './HookCounter4'
+import CreateMessage from './CreateMessage'
 import './style.css';
 
 class App extends Component {
@@ -29,12 +30,14 @@ class App extends Component {
       <button onClick={this.handleIncrease} name ='btn'>Increase Count</button>
 
       < Counter/>
-
+      
       <HookCounter2 />
 
       <HookCounter3 />
 
       <HookCounter4 />
+
+      <CreateMessage />
         
       </div>
     );

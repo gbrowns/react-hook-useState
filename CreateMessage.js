@@ -2,9 +2,8 @@ import React, {useState} from 'react'
 
 function CreateMessage(){
 
-  const [message,setMessage] = useState({name: '',text: ''});
-
-   const msglist = [];
+   const initialMsg = {name: '',text: ''};
+  const [message,setMessage] = useState(initialMsg);
 
   const handleChange = (e)=>{
 
@@ -13,8 +12,7 @@ function CreateMessage(){
 
   const submitMsg = (e) =>{
     e.preventDefault();
-    //msglist = [...message]
-    msglist.push(message)
+    setMessage({...message,message})
   }
   return (
     <div className='msgpane'>
@@ -31,20 +29,17 @@ function CreateMessage(){
         value={message.text} 
         onChange={handleChange}>
       </textarea>
-
+      <h2>Your name: {message.name}</h2>
+      <h5>Your message: {message.text}</h5>
       <button onClick={submitMsg}>submit</button>
 
       <div className='displayMsg'>
-        <ul>
-          {
-            msglist.map((msg, index)=> (
-              <li key = {index}>{msg}</li>
-            ))
-          }
-        </ul>
+        
       </div>
 
 
     </div>
   )
 }
+
+export default CreateMessage
