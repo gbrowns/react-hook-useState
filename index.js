@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Counter from './Counter';
 import HookCounter2 from './HookCounter2'
+import HookCounter3 from './HookCounter3'
 import './style.css';
 
 class App extends Component {
@@ -29,6 +30,8 @@ class App extends Component {
       < Counter/>
 
       <HookCounter2 />
+
+      <HookCounter3 />
         
       </div>
     );
