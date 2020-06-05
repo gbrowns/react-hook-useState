@@ -34,7 +34,9 @@ function CreateMessage(){
       <button onClick={submitMsg}>submit</button>
 
       <div className='displayMsg'>
-        
+        {
+          
+        }
       </div>
 
 
