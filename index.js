@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Counter from './Counter';
+import HookCounter2 from './HookCounter2'
 import './style.css';
 
 class App extends Component {
@@ -26,6 +27,8 @@ class App extends Component {
       <button onClick={this.handleIncrease} name ='btn'>Increase Count</button>
 
       < Counter/>
+
+      <HookCounter2 />
         
       </div>
     );
