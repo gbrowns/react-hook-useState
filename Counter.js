@@ -10,6 +10,7 @@ function Counter(){
       <h2>Hook_Count: {count} </h2>
       <button onClick={() => setCount(count+1)}>increase HookCount</button>
     </div>
+    
   )
 }
 
