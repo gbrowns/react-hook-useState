@@ -5,41 +5,45 @@ function NewCounter(){
   const [items,setItem] = useState([{title: '',message: ''}])
 
   const addMessage = (e) =>{
+    e.preventDefault();
     setItem([...items,{
       id: items.length,
       [e.target.name]: e.target.value
     }])
   }
 
-  /*const handleChange = (e) =>{
-    [e.]
-  }*/
+  const handleChange = (e) =>{
+    setItem([...items,{
+        [e.target.name]: e.target.value
+    }])
+  }
   return (
     <div>
         <input
           type='text'
           name='title'
-          value={items[0].title}
+          value={items.title}
           onChange={handleChange}
         />
         <textarea 
           name="message"
-          value={items[0].message}
+          value={items.message}
           onChange={handleChange}
         ></textarea>
-        <button type='button' onClick={addMessage}>Save message</button>  
-    </div>
+        <button type='button' onClick={addMessage}>Save message</button> 
 
-    <div className='display-text'>
-      <ul>
-        {
-          items.map(item => (<li key={item.id}>{item.message}</li>  ))
-        }
-      </ul>
-    
-    </div>
+        <div className='display-text'>
+          <ul>
+            {
+              items.map(item => (<li key={item.id}>{item.message}</li>) )
+            }
+          </ul>
+      
+        </div>
 
+    </div>
   )
+  
 }
 
 
