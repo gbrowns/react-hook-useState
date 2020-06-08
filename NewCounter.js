@@ -10,17 +10,21 @@ function NewCounter(){
       [e.target.name]: e.target.value
     }])
   }
+
+  /*const handleChange = (e) =>{
+    [e.]
+  }*/
   return (
     <div>
         <input
           type='text'
           name='title'
-          value={items.title}
+          value={items[0].title}
           onChange={handleChange}
         />
         <textarea 
           name="message"
-          value={items.message}
+          value={items[0].message}
           onChange={handleChange}
         ></textarea>
         <button type='button' onClick={addMessage}>Save message</button>  
