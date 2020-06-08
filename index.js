@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import Counter from './Counter';
 import HookCounter2 from './HookCounter2'
 import HookCounter3 from './HookCounter3'
-//import HookCounter4 from './HookCounter4'
+import HookCounter4 from './HookCounter4'
 import CreateMessage from './CreateMessage'
 import NewCounter from './NewCounter'
 import './style.css';
