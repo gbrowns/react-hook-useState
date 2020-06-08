@@ -2,19 +2,25 @@ import React, {useState} from 'react'
 
 function NewCounter(){
 
-  const [items,setItem] = useState([])
+  const [items,setItem] = useState([{title: '',message: ''}])
 
+  const addMessage = (e) =>{
+    setItem([...items,{
+      id: items.length,
+      [e.target.name]: e.target.value
+    }])
+  }
   return (
     <div>
         <input
           type='text'
           name='title'
-          value={}
+          value={items.title}
           onChange={handleChange}
         />
         <textarea 
           name="message"
-          value={}
+          value={items.message}
           onChange={handleChange}
         ></textarea>
         <button type='button' onClick={addMessage}>Save message</button>  
