@@ -30,7 +30,15 @@ class App extends Component {
       <h1>Count: {this.state.count}</h1>
       <button onClick={this.handleIncrease} name ='btn'>Increase Count</button>
 
-      < Counter/>
+      < NewCounter />
+        
+      </div>
+    );
+  }
+}
+
+/**
+ * < Counter/>
       
       <HookCounter2 username = 'john doe'/>
 
@@ -39,10 +47,6 @@ class App extends Component {
       <HookCounter4 />
 
       <CreateMessage />
-        
-      </div>
-    );
-  }
-}
+ */
 
 render(<App />, document.getElementById('root'));
