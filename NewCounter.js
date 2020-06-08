@@ -8,27 +8,24 @@ function NewCounter(){
     e.preventDefault();
     setItem([...items,{
       id: items.length,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
+      
     }])
   }
 
-  const handleChange = (e) =>{
-    setItem([...items,{
-        [e.target.name]: e.target.value
-    }])
-  }
+  
   return (
     <div>
         <input
           type='text'
           name='title'
           value={items.title}
-          onChange={handleChange}
+          onChange={addMessage}
         />
         <textarea 
           name="message"
           value={items.message}
-          onChange={handleChange}
+           onChange={addMessage}
         ></textarea>
         <button type='button' onClick={addMessage}>Save message</button> 
 
