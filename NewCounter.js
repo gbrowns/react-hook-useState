@@ -30,6 +30,15 @@ function NewCounter(){
         <button type='button' onClick={addMessage}>Save message</button>  
     </div>
 
+    <div className='display-text'>
+      <ul>
+        {
+          items.map(item => (<li key={item.id}>{item.message}</li>  ))
+        }
+      </ul>
+    
+    </div>
+
   )
 }
 
